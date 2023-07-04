@@ -84,7 +84,7 @@ class MainWindow(QMainWindow, Ui_Widget):
         download_percentage = (d['downloaded_bytes']/d['total_bytes']) *100
         self.progressBar.setProperty("value", download_percentage)
         if d['status'] == 'finished':
-            sleep(3)
+            sleep(1)
             self.change_input_state(False)
             self.lineEdit.clear()
             self.progressBar.hide()
