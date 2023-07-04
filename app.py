@@ -3,7 +3,7 @@ import yt_dlp
 from PyQt5 import QtCore
 from PyQt5.QtCore import QThread, pyqtSignal
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from MainWindow import Ui_Widget
+from gui.MainWindow import Ui_Widget
 from time import sleep
 
 class DownloadThread(QThread):

@@ -1,9 +1,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import os
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
-        
+        # Get the root directory of the project
+        root_directory = os.path.abspath(os.path.dirname("YTDL_APP"))
+
         # Define main widget
         Widget.setObjectName("Widget")
         Widget.resize(1080, 720)
@@ -33,7 +35,7 @@ class Ui_Widget(object):
         self.downloadButton = QtWidgets.QPushButton(Widget)
         self.downloadButton.setGeometry(QtCore.QRect(970, 610, 75, 75))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/E/Downloads/download.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(os.path.join(root_directory, 'assets', 'download.png')), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.downloadButton.setIcon(icon)
         self.downloadButton.setIconSize(QtCore.QSize(50, 50))
         self.downloadButton.setObjectName("downloadButton")
