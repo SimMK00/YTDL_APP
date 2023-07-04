@@ -3,8 +3,11 @@ import os
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
-        # Get the root directory of the project
-        root_directory = os.path.abspath(os.path.dirname("YTDL_APP"))
+        # Get the current directory of the file
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        
+        # Get root directory
+        root_directory = os.path.dirname(current_directory)
 
         # Define main widget
         Widget.setObjectName("Widget")
